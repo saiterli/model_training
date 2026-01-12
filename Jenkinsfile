@@ -36,14 +36,15 @@ pipeline {
 
         stage('Prepare Workspace') {
             steps {
-                sh '''
-                    rm -rf ${DATA_DIR} ${RUNS_DIR} ${MODELS_DIR} ${VENV_DIR}
-                    mkdir -p \
-                      ${RAW_DIR} \
-                      ${TRAIN_IMG} ${TRAIN_LBL} \
-                      ${VAL_IMG} ${VAL_LBL} \
-                      ${MODELS_DIR}
-                '''
+                echo "Preparing workspace..."
+                // sh '''
+                //     rm -rf ${DATA_DIR} ${RUNS_DIR} ${MODELS_DIR} ${VENV_DIR}
+                //     mkdir -p \
+                //       ${RAW_DIR} \
+                //       ${TRAIN_IMG} ${TRAIN_LBL} \
+                //       ${VAL_IMG} ${VAL_LBL} \
+                //       ${MODELS_DIR}
+                // '''
             }
         }
 
